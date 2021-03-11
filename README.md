@@ -1,21 +1,17 @@
 # PragmaticExercises
 
-**TODO: Add description**
+This repository contains solutions for some of the exercises proposed in the Pragmatic Programmer book.
 
-## Installation
+To run a specific exercise you have to access elixir console and execute the corresponding
+module `run` function. For example, to execute the 4th exercise solution:
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `pragmatic_exercises` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:pragmatic_exercises, "~> 0.1.0"}
-  ]
-end
+```bash
+> ies -S mix
+iex(1)> Ex4.run
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/pragmatic_exercises](https://hexdocs.pm/pragmatic_exercises).
+To run the automated tests:
 
+```bash
+mix test
+```
