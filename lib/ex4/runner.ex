@@ -1,6 +1,9 @@
 defmodule Ex4.Runner do
   def run({:ok, cmd, args}) when is_binary(cmd) and is_list(args) do
-    cmd = String.to_atom("_#{cmd}")
+    cmd = cmd
+    |> String.downcase()
+    |> String.to_atom()
+
     apply(__MODULE__, cmd, args)
   end
 
@@ -8,31 +11,31 @@ defmodule Ex4.Runner do
     IO.puts("Command not found!")
   end
 
-  def _P(pen) do
+  def p(pen) do
     IO.puts("select pen #{pen}")
   end
 
-  def _D() do
+  def d() do
     IO.puts("pen down")
   end
 
-  def _W(dst) do
+  def w(dst) do
     IO.puts("draw west #{dst}cm")
   end
 
-  def _N(dst) do
+  def n(dst) do
     IO.puts("draw north #{dst}cm")
   end
 
-  def _E(dst) do
+  def e(dst) do
     IO.puts("draw east #{dst}cm")
   end
 
-  def _S(dst) do
+  def s(dst) do
     IO.puts("draw south #{dst}cm")
   end
 
-  def _U() do
+  def u() do
     IO.puts("pen up")
   end
 end

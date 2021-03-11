@@ -1,12 +1,12 @@
 defmodule Ex5 do
-  alias Ex4.Runner
+  import Ex4.Runner
   def run() do
-    Runner._P 2
-    Runner._D
-    Runner._W 2
-    Runner._N 1
-    Runner._E 2
-    Runner._S 1
-    Runner._U
+    p 2
+    d
+    w 2
+    n 1
+    e 2
+    s 1
+    u
   end
 end
